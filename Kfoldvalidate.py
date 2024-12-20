@@ -99,9 +99,9 @@ import pandas as pd
 # import sparrow as spa
 import matplotlib.pyplot as plt
 
-path = r'G:\文章成果\期刊论文\水合物储层渗透率\数据\1 第4组.xlsx'
-sheetname = 'Sheet2' 
-num =  int(3005*0.8)
+path = r'G:\文章成果\期刊论文\水合物储层渗透率\数据\*.xlsx'
+sheetname = '*' 
+num =  int(2420*0.8)
 data_frame = pd.read_excel(path, str(sheetname))
 str1 = data_frame.columns
 data_frame = np.array(data_frame)
@@ -114,7 +114,7 @@ data = data_frame[:num]
 x_train = data[:, : -1]
 y_train = data[:, -1]
 
-data = data_frame[num:3005]
+data = data_frame[num:2420]
 x_test = data[:, : -1]
 y_test = data[:, -1]
 #%%
